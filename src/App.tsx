@@ -105,11 +105,8 @@ function App() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
           >
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-foreground tracking-tight leading-tight mb-6">AIBOMI</h1>
-            <p className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto leading-relaxed">
-              Creating intelligent web and mobile applications that bring your ideas to life. 
-              Specialists in AI coding for modern end users.
-            </p>
+            <h1 className="md:text-5xl lg:text-6xl font-bold text-foreground tracking-tight mb-6 text-4xl">AI-Powered Apps for the Modern World</h1>
+            <p className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto leading-relaxed">We specialize in creating intelligent web and mobile applications that solve real problems. Expert AI coding meets thoughtful design.</p>
           </motion.div>
         </section>
 
@@ -271,7 +268,7 @@ function App() {
           <div className="flex flex-col md:flex-row items-center justify-between gap-6">
             <div className="text-center md:text-left">
               <p className="font-semibold text-foreground mb-1">Aibomi ApS</p>
-              <p className="text-sm text-muted-foreground">Denmark</p>
+              <p className="text-sm text-muted-foreground">CVR-nummer 46102975<br>Denmark</p>
             </div>
             
             <div className="flex items-center gap-2 text-sm text-muted-foreground">
