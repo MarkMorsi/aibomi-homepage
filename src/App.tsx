@@ -106,7 +106,7 @@ function App() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
           >
-            <h1 className="md:text-5xl lg:text-6xl font-bold text-foreground tracking-tight mb-6 text-4xl">AI-Powered Apps for the Modern World</h1>
+            <h1 className="md:text-5xl lg:text-6xl font-bold text-foreground tracking-tight mb-6 text-4xl">AI-Powered Apps for<br>the Modern World</h1>
             <p className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto leading-relaxed mb-12">We specialize in creating intelligent web and mobile applications that solve real problems. Expert AI coding meets thoughtful design.</p>
           </motion.div>
           
