@@ -8,7 +8,6 @@ import { Separator } from '@/components/ui/separator'
 import { Brain, DeviceMobile, AppWindow, PaperPlaneTilt, EnvelopeSimple, CheckCircle } from '@phosphor-icons/react'
 import { toast } from 'sonner'
 import { motion } from 'framer-motion'
-import { CopenhagenSkyline } from '@/components/CopenhagenSkyline'
 
 function App() {
   const [formData, setFormData] = useState({
@@ -109,10 +108,6 @@ function App() {
             <h1 className="md:text-5xl lg:text-6xl font-bold text-foreground tracking-tight mb-6 text-4xl">AI-Powered Apps for<br />the Modern World</h1>
             <p className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto leading-relaxed mb-12">We specialize in creating intelligent web and mobile applications that solve real problems. Expert AI coding meets thoughtful design.</p>
           </motion.div>
-          
-          <div className="mt-16">
-            <CopenhagenSkyline />
-          </div>
         </section>
 
         <Separator className="max-w-4xl mx-auto" />
