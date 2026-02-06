@@ -268,7 +268,7 @@ function App() {
           <div className="flex flex-col md:flex-row items-center justify-between gap-6">
             <div className="text-center md:text-left">
               <p className="font-semibold text-foreground mb-1">Aibomi ApS</p>
-              <p className="text-sm text-muted-foreground">CVR-nummer 46102975<br>Denmark</p>
+              <p className="text-sm text-muted-foreground">CVR-nummer 46102975<br />Denmark</p>
             </div>
             
             <div className="flex items-center gap-2 text-sm text-muted-foreground">
