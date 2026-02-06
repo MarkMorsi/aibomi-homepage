@@ -164,9 +164,7 @@ function App() {
               <h2 className="text-3xl md:text-4xl font-semibold mb-4 tracking-tight">
                 Get In Touch
               </h2>
-              <p className="text-base md:text-lg text-muted-foreground">
-                Have a project in mind? We'd love to hear from you.
-              </p>
+              <p className="text-base md:text-lg text-muted-foreground">Wanna collaborate? We'd love to hear from you.</p>
             </div>
 
             {isSubmitted ? (
@@ -224,9 +222,7 @@ function App() {
                     </div>
 
                     <div>
-                      <Label htmlFor="message" className="text-sm font-medium">
-                        Message
-                      </Label>
+                      <Label htmlFor="message" className="text-sm font-medium">Message</Label>
                       <Textarea
                         id="message"
                         value={formData.message}
@@ -234,7 +230,7 @@ function App() {
                         className={`mt-2 min-h-[150px] transition-all duration-200 ${
                           errors.message ? 'border-destructive ring-destructive' : ''
                         }`}
-                        placeholder="Tell us about your project..."
+                        placeholder="Tell us whats on your mind..."
                         maxLength={1000}
                       />
                       {errors.message && (
