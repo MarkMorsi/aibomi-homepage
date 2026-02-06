@@ -183,19 +183,19 @@ function App() {
               <Card className="border-border">
                 <CardContent className="p-8 md:p-10">
                   <form onSubmit={handleSubmit} className="space-y-6">
-                animate={{ opacity: 1, scale: 1 }}
-                className="bg-card border border-border rounded-lg p-12 text-center"
-              >
-                <CheckCircle weight="thin" className="w-16 h-16 text-primary mx-auto mb-4" />
-                <h3 className="text-xl font-medium mb-2">Email Client Opened</h3>
-                <p className="text-muted-foreground">
-                  Your message is ready to send to hey.you@aibomi.eu
-                </p>
-              </motion.div>
-            ) : (
-              <Card className="border-border">
-                <CardContent className="p-8 md:p-10">
-                  <form onSubmit={handleSubmit} className="space-y-6">
+                    <div>
+                      <Label htmlFor="name" className="text-sm font-medium">
+                        Name
+                      </Label>
+                      <Input
+                        id="name"
+                        type="text"
+                        value={formData.name}
+                        onChange={(e) => handleInputChange('name', e.target.value)}
+                        className={`mt-2 transition-all duration-200 ${
+                          errors.name ? 'border-destructive ring-destructive' : ''
+                        }`}
+                        placeholder="Your name"
                       />
                       {errors.name && (
                         <p className="text-sm text-destructive mt-1">{errors.name}</p>
