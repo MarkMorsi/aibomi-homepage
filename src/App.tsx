@@ -20,7 +20,7 @@ function App() {
   const [isSubmitted, setIsSubmitted] = useState(false)
 
   const validateEmail = (email: string) => {
-    return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)
+    return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
   }
 
   const handleSubmit = async (e: React.FormEvent) => {
@@ -105,9 +105,7 @@ function App() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
           >
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-foreground tracking-tight leading-tight mb-6">
-              Aibomi ApS
-            </h1>
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-foreground tracking-tight leading-tight mb-6">Aibomi ApS</h1>
             <p className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto leading-relaxed">
               Creating intelligent web and mobile applications that bring your ideas to life. 
               Specialists in AI coding for modern end users.
@@ -268,7 +266,6 @@ function App() {
           </motion.div>
         </section>
       </main>
-
       <footer className="border-t border-border bg-card/50">
         <div className="mx-auto max-w-6xl px-6 py-12">
           <div className="flex flex-col md:flex-row items-center justify-between gap-6">
@@ -296,7 +293,7 @@ function App() {
         </div>
       </footer>
     </div>
-  )
+  );
 }
 
 export default App
