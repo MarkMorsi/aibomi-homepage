@@ -8,6 +8,7 @@ import { Separator } from '@/components/ui/separator'
 import { Brain, DeviceMobile, AppWindow, PaperPlaneTilt, EnvelopeSimple, CheckCircle } from '@phosphor-icons/react'
 import { toast } from 'sonner'
 import { motion } from 'framer-motion'
+import { CopenhagenSkyline } from '@/components/CopenhagenSkyline'
 
 function App() {
   const [formData, setFormData] = useState({
@@ -99,11 +100,15 @@ function App() {
   return (
     <div className="min-h-screen bg-background">
       <main className="mx-auto max-w-6xl px-6">
-        <section className="py-24 md:py-32 text-center relative">
+        <section className="py-24 md:py-32 text-center relative overflow-hidden">
+          <div className="absolute inset-0 flex items-end justify-center opacity-40 pointer-events-none">
+            <CopenhagenSkyline className="w-full h-auto max-h-[300px]" />
+          </div>
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
+            className="relative z-10"
           >
             <h1 className="md:text-5xl lg:text-6xl font-bold text-foreground tracking-tight mb-6 text-4xl">AI-Powered Apps for<br />the Modern World</h1>
             <p className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto leading-relaxed mb-12">We specialize in creating intelligent web and mobile applications that solve real problems. Expert AI coding meets thoughtful design.</p>
