@@ -35,7 +35,7 @@ function TermsOfUse() {
             Terms of Use
           </h1>
           <p className="text-muted-foreground mb-8">
-            Last updated: {new Date().toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' })}
+            Last updated: May 1, 2025
           </p>
 
           <Separator className="mb-12" />

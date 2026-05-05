@@ -5,45 +5,45 @@ import { AppleLogo, GooglePlayLogo, ChartLine, Users, Clock, Star, CookingPot, H
 import { motion } from 'framer-motion'
 import { Link } from 'react-router-dom'
 
+const features = [
+  {
+    icon: <CookingPot weight="thin" className="w-12 h-12" />,
+    title: 'AI-Powered Meal Plans',
+    description: 'Get personalized weekly meal plans tailored to your dietary preferences and nutritional goals.'
+  },
+  {
+    icon: <Heart weight="thin" className="w-12 h-12" />,
+    title: 'Health Focused',
+    description: 'Track calories, macros, and nutrition to reach your wellness objectives with confidence.'
+  },
+  {
+    icon: <Clock weight="thin" className="w-12 h-12" />,
+    title: 'Save Time',
+    description: 'Automated shopping lists and quick recipes help you spend less time planning, more time living.'
+  },
+  {
+    icon: <Star weight="thin" className="w-12 h-12" />,
+    title: 'Recipe Library',
+    description: 'Access thousands of curated recipes from around the world, rated by the community.'
+  }
+]
+
+const stats = [
+  { icon: <Users weight="thin" className="w-8 h-8" />, value: '50K+', label: 'Active Users' },
+  { icon: <CookingPot weight="thin" className="w-8 h-8" />, value: '100K+', label: 'Recipes' },
+  { icon: <ChartLine weight="thin" className="w-8 h-8" />, value: '2M+', label: 'Meals Planned' }
+]
+
+const benefits = [
+  'AI-generated meal plans based on your preferences',
+  'Automated grocery lists synced across devices',
+  'Nutritional tracking and insights',
+  'Recipe discovery and ratings',
+  'Meal prep scheduling',
+  'Dietary restriction support'
+]
+
 function SevenPlates() {
-  const features = [
-    {
-      icon: <CookingPot weight="thin" className="w-12 h-12" />,
-      title: 'AI-Powered Meal Plans',
-      description: 'Get personalized weekly meal plans tailored to your dietary preferences and nutritional goals.'
-    },
-    {
-      icon: <Heart weight="thin" className="w-12 h-12" />,
-      title: 'Health Focused',
-      description: 'Track calories, macros, and nutrition to reach your wellness objectives with confidence.'
-    },
-    {
-      icon: <Clock weight="thin" className="w-12 h-12" />,
-      title: 'Save Time',
-      description: 'Automated shopping lists and quick recipes help you spend less time planning, more time living.'
-    },
-    {
-      icon: <Star weight="thin" className="w-12 h-12" />,
-      title: 'Recipe Library',
-      description: 'Access thousands of curated recipes from around the world, rated by the community.'
-    }
-  ]
-
-  const stats = [
-    { icon: <Users weight="thin" className="w-8 h-8" />, value: '50K+', label: 'Active Users' },
-    { icon: <CookingPot weight="thin" className="w-8 h-8" />, value: '100K+', label: 'Recipes' },
-    { icon: <ChartLine weight="thin" className="w-8 h-8" />, value: '2M+', label: 'Meals Planned' }
-  ]
-
-  const benefits = [
-    'AI-generated meal plans based on your preferences',
-    'Automated grocery lists synced across devices',
-    'Nutritional tracking and insights',
-    'Recipe discovery and ratings',
-    'Meal prep scheduling',
-    'Dietary restriction support'
-  ]
-
   return (
     <div className="min-h-screen bg-background">
       <nav className="border-b border-border bg-card/50 backdrop-blur-sm sticky top-0 z-50">
@@ -72,14 +72,18 @@ function SevenPlates() {
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
-              <Button size="lg" className="bg-foreground hover:bg-foreground/90 text-background gap-2">
-                <AppleLogo weight="fill" className="w-5 h-5" />
-                Download for iOS
-              </Button>
-              <Button size="lg" variant="outline" className="gap-2 border-2">
-                <GooglePlayLogo weight="fill" className="w-5 h-5" />
-                Get it on Android
-              </Button>
+              <a href="https://apps.apple.com" target="_blank" rel="noopener noreferrer">
+                <Button size="lg" className="bg-foreground hover:bg-foreground/90 text-background gap-2 w-full">
+                  <AppleLogo weight="fill" className="w-5 h-5" />
+                  Download for iOS
+                </Button>
+              </a>
+              <a href="https://play.google.com" target="_blank" rel="noopener noreferrer">
+                <Button size="lg" variant="outline" className="gap-2 border-2 w-full">
+                  <GooglePlayLogo weight="fill" className="w-5 h-5" />
+                  Get it on Android
+                </Button>
+              </a>
             </div>
 
             <div className="flex flex-wrap items-center justify-center gap-8 text-sm text-muted-foreground">
@@ -206,14 +210,18 @@ function SevenPlates() {
               Join thousands of users who have transformed their relationship with food. Download 7Plates now and get your first week of meal plans free.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button size="lg" className="bg-primary hover:bg-primary/90 text-primary-foreground gap-2">
-                <AppleLogo weight="fill" className="w-5 h-5" />
-                Download for iOS
-              </Button>
-              <Button size="lg" variant="outline" className="gap-2 border-2">
-                <GooglePlayLogo weight="fill" className="w-5 h-5" />
-                Get it on Android
-              </Button>
+              <a href="https://apps.apple.com" target="_blank" rel="noopener noreferrer">
+                <Button size="lg" className="bg-primary hover:bg-primary/90 text-primary-foreground gap-2 w-full">
+                  <AppleLogo weight="fill" className="w-5 h-5" />
+                  Download for iOS
+                </Button>
+              </a>
+              <a href="https://play.google.com" target="_blank" rel="noopener noreferrer">
+                <Button size="lg" variant="outline" className="gap-2 border-2 w-full">
+                  <GooglePlayLogo weight="fill" className="w-5 h-5" />
+                  Get it on Android
+                </Button>
+              </a>
             </div>
           </motion.div>
         </section>

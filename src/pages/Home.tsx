@@ -271,7 +271,7 @@ function Home() {
                         className={`mt-2 min-h-[150px] transition-all duration-200 ${
                           errors.message ? 'border-destructive ring-destructive' : ''
                         }`}
-                        placeholder="Tell us whats on your mind..."
+                        placeholder="Tell us what's on your mind..."
                         maxLength={1000}
                       />
                       {errors.message && (
