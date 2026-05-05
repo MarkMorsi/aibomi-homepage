@@ -36,7 +36,7 @@
   --input: oklch(0.88 0.05 270);
   --ring: oklch(0.55 0.22 260);
 
-  --radius: 0.75rem;
+  --radius: 1rem;
 }
 
 @theme {
