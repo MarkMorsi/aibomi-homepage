@@ -1,11 +1,11 @@
 import { useState } from 'react'
 import { Button } from '@/components/ui/button'
-import { Input } from '@/components/ui/input'
 import { Label } from '@/components/ui/label'
-import { Textarea } from '@/components/ui/textarea'
-import { Card, CardContent } from '@/components/ui/card'
-import { Separator } from '@/components/ui/separator'
-import { Brain, DeviceMobile, AppWindow, PaperPlaneTilt, EnvelopeSimple, CheckCircle } from '@phosphor-icons/react'
+import { Label } from '@/components/ui/label'
+import { toast } from 'sonner'
+import { CopenhagenSkyline } from '@/components/Copenhag
+function Home() {
+    name: '',
 import { toast } from 'sonner'
 import { motion } from 'framer-motion'
 import { CopenhagenSkyline } from '@/components/CopenhagenSkyline'
@@ -14,31 +14,31 @@ function Home() {
   const [formData, setFormData] = useState({
     name: '',
     email: '',
-    message: ''
-  })
-  const [errors, setErrors] = useState<{ [key: string]: string }>({})
-  const [isSubmitting, setIsSubmitting] = useState(false)
-  const [isSubmitted, setIsSubmitted] = useState(false)
-
-  const validateEmail = (email: string) => {
-    return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
-  }
-
-  const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault()
+      newErrors
     
-    const newErrors: { [key: string]: string } = {}
+      newErrors.email = 'Email is required'
+      newErrors.email = 'Please enter a valid email addre
     
-    if (!formData.name.trim()) {
+
+    
+      setErrors(newErrors)
+   
+
+    const mailtoLink = `mailto:hey.you@aibomi.eu?subje
+    )}`
+    
+    setTimeout(() => {
+    
+      
       newErrors.name = 'Name is required'
     }
-    
+  }
     if (!formData.email.trim()) {
       newErrors.email = 'Email is required'
     } else if (!validateEmail(formData.email)) {
       newErrors.email = 'Please enter a valid email address'
     }
-    
+
     if (!formData.message.trim()) {
       newErrors.message = 'Message is required'
     }
@@ -47,7 +47,7 @@ function Home() {
       setErrors(newErrors)
       return
     }
-    
+
     setIsSubmitting(true)
     
     const mailtoLink = `mailto:hey.you@aibomi.eu?subject=Contact from ${encodeURIComponent(formData.name)}&body=${encodeURIComponent(
@@ -62,70 +62,70 @@ function Home() {
       toast.success('Email client opened! Your message is ready to send.')
       
       setFormData({ name: '', email: '', message: '' })
-      setErrors({})
+          </motion.
       
-      setTimeout(() => setIsSubmitted(false), 5000)
-    }, 500)
-  }
+              <motion.div
+           
+   
 
-  const handleInputChange = (field: string, value: string) => {
-    setFormData(prev => ({ ...prev, [field]: value }))
-    if (errors[field]) {
-      setErrors(prev => {
-        const newErrors = { ...prev }
-        delete newErrors[field]
-        return newErrors
-      })
-    }
-  }
+                  <CardContent className="p-8 flex flex-col ite
+                      {service.icon}
+                    <h3 
+                    </h3>
+                      {service.descri
+                  </CardContent
+              </motion.d
+        
 
-  const services = [
-    {
-      icon: <Brain weight="thin" className="w-10 h-10 text-primary" />,
-      title: 'AI Coding',
-      description: 'Specialized expertise in AI-powered development, creating intelligent solutions that push boundaries.'
-    },
-    {
-      icon: <AppWindow weight="thin" className="w-10 h-10 text-primary" />,
-      title: 'Web Applications',
-      description: 'Modern, responsive web apps built with cutting-edge technologies for seamless user experiences.'
-    },
-    {
-      icon: <DeviceMobile weight="thin" className="w-10 h-10 text-primary" />,
-      title: 'Mobile Apps',
-      description: 'Native and cross-platform mobile solutions designed for performance and user delight.'
-    }
-  ]
 
-  return (
-    <div className="min-h-screen bg-background">
-      <main className="mx-auto max-w-6xl px-6">
-        <section className="py-24 md:py-32 text-center relative overflow-hidden">
-          <div className="absolute inset-0 flex items-end justify-center opacity-40 pointer-events-none">
-            <CopenhagenSkyline className="w-full h-auto max-h-[300px]" />
-          </div>
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            className="relative z-10"
+
+            whileInV
+     
           >
-            <h1 className="md:text-5xl lg:text-6xl font-bold text-foreground tracking-tight mb-6 text-4xl">AI-Powered Apps for<br />the Modern World</h1>
-            <p className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto leading-relaxed mb-12">We specialize in creating intelligent web and mobile applications that solve real problems. Expert AI coding meets thoughtful design.</p>
-          </motion.div>
-        </section>
+              <h2 classNa
+              </h2>
+      
+     
+                initial={{ opacity: 0, scale: 0.95 }}
+                className="bg-ca
+                <CheckCircle weight="thin" className="w-16 h-16 text-primary mx-auto mb-4" />
+      
+     
+            ) : (
+                <CardConten
+                    <div>
+     
+   
 
-        <Separator className="max-w-4xl mx-auto" />
+          
+                          errors.name ? 'border-
+                        placeholder="Your name"
+                      {errors.name && (
+                      )}
 
-        <section className="py-24 md:py-32">
-          <motion.h2 
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.5 }}
-            className="text-3xl md:text-4xl font-semibold text-center mb-16 tracking-tight"
-          >
-            What We Do
+                
+                     
+                        id="email"
+                        value={formData.em
+                        className={`mt-2 t
+                        }`}
+           
+                        <p className="text-sm text-destructive mt-1">{errors.email}</p>
+                    </div>
+                    <di
+                  
+
+                        className={`mt-2 min-h-[150
+
+                        maxLength={1000}
+                     
+                      )}
+
+                      type="submit" 
+                      disabled={isSubmitti
+                      {isSubmitting ? (
+           
+                      
           </motion.h2>
           
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -258,11 +258,11 @@ function Home() {
                       )}
                     </Button>
                   </form>
-                </CardContent>
+
               </Card>
-            )}
+
           </motion.div>
-        </section>
+
       </main>
       <footer className="border-t border-border bg-card/50">
         <div className="mx-auto max-w-6xl px-6 py-12">
@@ -270,28 +270,28 @@ function Home() {
             <div className="text-center md:text-left">
               <p className="font-semibold text-foreground mb-1">Aibomi ApS</p>
               <p className="text-sm text-muted-foreground">CVR-nummer 46102975<br />Denmark</p>
-            </div>
+
             
             <div className="flex items-center gap-2 text-sm text-muted-foreground">
               <EnvelopeSimple weight="thin" className="w-4 h-4" />
               <a 
                 href="mailto:hey.you@aibomi.eu" 
-                className="hover:text-primary transition-colors duration-200"
-              >
-                hey.you@aibomi.eu
-              </a>
-            </div>
-          </div>
-          
-          <Separator className="my-8" />
-          
-          <p className="text-center text-sm text-muted-foreground">
-            © {new Date().getFullYear()} Aibomi ApS. All rights reserved.
-          </p>
-        </div>
-      </footer>
-    </div>
-  );
-}
 
-export default Home
+              >
+
+              </a>
+
+          </div>
+
+          <Separator className="my-8" />
+
+          <p className="text-center text-sm text-muted-foreground">
+
+          </p>
+
+      </footer>
+
+  );
+
+
+
